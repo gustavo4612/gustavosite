@@ -1,0 +1,86 @@
+  <!DOCTYPE html>
+  <html lang="en" >
+    <head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feito para Talita Dias!</title>
+
+    <style>
+        body{
+            background-color: blue;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: blue;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: blue;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1> Te amo minha linda!</h1>
+
+        <img src="https://img.freepik.com/vetores-premium/porquinho-fofo-com-um-coracao-ilustracao-dos-desenhos-animados_159446-743.jpg?w=2000" alt="Imagem não carregada" style="height: 320px; width: 450px; text-align: center;">>
+
+        <h2>Aceita casar comigo? </h2>
+        
+
+        <a href="https://youtu.be/tqqsaezK1-I?si=-aBs8HCwFHBN_Xh6"><button id="sim" > Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
